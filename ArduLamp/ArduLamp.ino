@@ -13,14 +13,14 @@ void setup() {
 } 
 
 void loop() { 
-  char buf;
   if (Serial.available() > 0) { 
     buf = Serial.read();
-    if (buf == '0') { 
+    if (buf == 'f') { 
       digitalWrite(lamp_pin, LOW);
     } 
-    if (buf == '1') { 
+    if (buf == 'n') { 
       digitalWrite(lamp_pin, HIGH);
     }
   }
+  delay(1000);
 } 
