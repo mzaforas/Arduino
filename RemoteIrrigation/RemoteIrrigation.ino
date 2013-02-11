@@ -9,7 +9,7 @@
 int TCP_PORT = 1234;
 int RELAY_PIN = 2;
 int PERIOD = 6 * 60 * 60; // every 6 hour (in seconds)
-int DEFAULT_IRRIGATION_TIME = 5; // seconds
+int DEFAULT_IRRIGATION_TIME = 10; // seconds
 
 byte mac[] = { 0x00, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE };
 EthernetServer server(TCP_PORT);

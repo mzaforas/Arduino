@@ -6,8 +6,8 @@
 
 // CONSTANTS
 int relay_pin = 13;
-int period = 60 * 60; // every hour (in seconds)
-int irrigation_time = 2000; // ms
+int period = 6 * 60 * 60; // every hour (in seconds)
+int irrigation_time = 10000; // ms
 
 
 int countdown;
@@ -15,11 +15,10 @@ int countdown;
 void setup() { 
   pinMode(relay_pin, OUTPUT);
   Serial.begin(9600);
-  countdown = period;
+  countdown = 0;
 } 
 
 void loop() { 
-  countdown--;
   Serial.println(countdown);
   if (countdown == 0) {
     digitalWrite(relay_pin, HIGH);
@@ -27,6 +26,7 @@ void loop() {
     digitalWrite(relay_pin, LOW);
     countdown = period;
   }
+  countdown--;
   delay(1000);
 } 
 
