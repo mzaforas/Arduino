@@ -6,8 +6,8 @@
 
 // CONSTANTS
 int relay_pin = 13;
-int period = 6 * 60 * 60; // every hour (in seconds)
-int irrigation_time = 10000; // ms
+int period = 3 * 60 * 60; // every hour (in seconds)
+int irrigation_time = 8000; // ms
 
 
 int countdown;
