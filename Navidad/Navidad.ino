@@ -27,8 +27,11 @@ void calculate_target() {
   int i;
   for (i=0; i < NUM_LEDS; i++) {
     current_status[i] = target_status[i]; // Set current to supposed reached target
-    long first_target = random(255);
-    target_status[i] = first_target - random(first_target); // Get random new target
+    long first_target = random(0,2);
+    if (first_target == 1) {
+      first_target = 255;
+    }
+    target_status[i] = first_target;
     if (target_status[i] > current_status[i]) {
       delta[i] = 1;
     } else {
